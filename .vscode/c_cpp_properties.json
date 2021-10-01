@@ -1,0 +1,88 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/edwin/Documents/PlatformIO/Projects/NavLights/include",
+                "/home/edwin/Documents/PlatformIO/Projects/NavLights/src",
+                "/home/edwin/Documents/PlatformIO/Projects/NavLights/.pio/libdeps/pro16MHzatmega328/EnableInterrupt",
+                "/home/edwin/Documents/PlatformIO/Projects/NavLights/.pio/libdeps/pro16MHzatmega328/EnableInterrupt/utility",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                "/home/edwin/.platformio/lib/AccelStepper/src",
+                "/home/edwin/.platformio/lib/Adafruit ADXL343_ID6117",
+                "/home/edwin/.platformio/lib/Adafruit BusIO",
+                "/home/edwin/.platformio/lib/Adafruit Unified Sensor",
+                "/home/edwin/.platformio/lib/ArduinoJson/src",
+                "/home/edwin/.platformio/lib/DFRobotDFPlayerMini_ID1308",
+                "/home/edwin/.platformio/lib/DHT sensor library",
+                "/home/edwin/.platformio/lib/FastLED/src",
+                "/home/edwin/.platformio/lib/HttpClient_ID66",
+                "/home/edwin/.platformio/lib/PubSubClient_ID89/src",
+                "/home/edwin/.platformio/lib/TaskScheduler/src",
+                "/home/edwin/.platformio/lib/U8glib_ID7/src",
+                "/home/edwin/.platformio/lib/UTFT_ID2491",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "/home/edwin/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/edwin/Documents/PlatformIO/Projects/NavLights/include",
+                    "/home/edwin/Documents/PlatformIO/Projects/NavLights/src",
+                    "/home/edwin/Documents/PlatformIO/Projects/NavLights/.pio/libdeps/pro16MHzatmega328/EnableInterrupt",
+                    "/home/edwin/Documents/PlatformIO/Projects/NavLights/.pio/libdeps/pro16MHzatmega328/EnableInterrupt/utility",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                    "/home/edwin/.platformio/lib/AccelStepper/src",
+                    "/home/edwin/.platformio/lib/Adafruit ADXL343_ID6117",
+                    "/home/edwin/.platformio/lib/Adafruit BusIO",
+                    "/home/edwin/.platformio/lib/Adafruit Unified Sensor",
+                    "/home/edwin/.platformio/lib/ArduinoJson/src",
+                    "/home/edwin/.platformio/lib/DFRobotDFPlayerMini_ID1308",
+                    "/home/edwin/.platformio/lib/DHT sensor library",
+                    "/home/edwin/.platformio/lib/FastLED/src",
+                    "/home/edwin/.platformio/lib/HttpClient_ID66",
+                    "/home/edwin/.platformio/lib/PubSubClient_ID89/src",
+                    "/home/edwin/.platformio/lib/TaskScheduler/src",
+                    "/home/edwin/.platformio/lib/U8glib_ID7/src",
+                    "/home/edwin/.platformio/lib/UTFT_ID2491",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "/home/edwin/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "/home/edwin/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50200",
+                "ARDUINO_AVR_PRO",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/home/edwin/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
