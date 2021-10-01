@@ -1,11 +1,3 @@
-/* 
-2 witte leds (landinglights) = schakelbaar en aan bij flaps down
-1 groene navigatie led rechts = schakelbaar
-1 rode navigatie led links = schakelbaar
-1 witte led achter = schakelbaar
-2 rode (strobe) beacon lights = schakelbaar, faden aan en uit
- */
-
 #include <EnableInterrupt.h>
 
 #define SERIAL_PORT_SPEED 9600
