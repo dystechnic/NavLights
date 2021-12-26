@@ -2,17 +2,18 @@
 
 #define SERIAL_PORT_SPEED 9600
 
-#define RC_NUM_CHANNELS  2
+#define RC_NUM_CHANNELS  1
 #define RC_CH1  0
-#define RC_CH2  1
+// #define RC_CH2  1
 
 // pins receiver is connected to
 #define RC_CH1_INPUT  14  //  == pin A0
-#define RC_CH2_INPUT  15  //  == pin A1
+// #define RC_CH2_INPUT  15  //  == pin A1
 
 // definition of signal thresholds
 #define INPUT_LOW_THRESHOLD 1000 // Low to Mid input signal threshold. 
-#define INPUT_MID_THRESHOLD 1500 // Mid to High input signal threshold.
+#define INPUT_MID_THRESHOLD 1400 // Mid to High input signal threshold.
+#define INPUT_HIGH_THRESHOLD 1800 // Mid to High input signal threshold.
 
 //  Landing light settings
 #define LL_PIN_LIGHT 9 // Landing light output pin number
@@ -63,13 +64,8 @@ void calc_ch1() {
   calc_input(RC_CH1, RC_CH1_INPUT); 
 }
 
-void calc_ch2() {
-  calc_input(RC_CH2, RC_CH2_INPUT); 
-}
-
 void debug() {
   Serial.print("CH1:"); Serial.print(rc_values[RC_CH1]); Serial.print("\t");
-  Serial.print("CH2:"); Serial.println(rc_values[RC_CH2]);
 }
 
 // Turn on or off landing light
@@ -86,7 +82,7 @@ void setLandingLight(boolean state)
 void checkLandingLight()
 {
   // Check LL input position
-  if (rc_values[RC_CH2] >= INPUT_MID_THRESHOLD) {
+  if (rc_values[RC_CH1] > INPUT_HIGH_THRESHOLD) {
     setLandingLight(true);
   } else {
     setLandingLight(false);
@@ -165,16 +161,13 @@ void setup() {
   pinMode(NAV_PIN_LIGHT, OUTPUT);
  
   //  Declaration of input pins 
+  //  Add as many as you need
   pinMode(RC_CH1_INPUT, INPUT);
-  pinMode(RC_CH2_INPUT, INPUT);
-  //  pinMode(RC_CH3_INPUT, INPUT);
-  //  pinMode(RC_CH4_INPUT, INPUT);
+  //  pinMode(RC_CH2_INPUT, INPUT);
 
   //  Enable interrupts on input channels
   enableInterrupt(RC_CH1_INPUT, calc_ch1, CHANGE);
-  enableInterrupt(RC_CH2_INPUT, calc_ch2, CHANGE);
-//  enableInterrupt(RC_CH3_INPUT, calc_ch3, CHANGE);
-//  enableInterrupt(RC_CH4_INPUT, calc_ch4, CHANGE);
+  //  enableInterrupt(RC_CH2_INPUT, calc_ch2, CHANGE);
 }
 
 void loop() {
@@ -186,12 +179,11 @@ void loop() {
     // nothing to do. Light switch is off.
   }
   else {
-    checkLandingLight();
    // Check if it's time to fade the anti-collision lights
     if ((currentTime - lastFadeTime) > ACB_FADE_INTERVAL) {
       doFade();
       lastFadeTime = currentTime;
-    }
+    }    checkLandingLight();
 
   // Check if it's time to blink the strobes
     if ((currentTime - lastStrobeTime) > STB_BLINK_INTERVAL) {
@@ -201,5 +193,5 @@ void loop() {
 
   }
   
-  //  debug(); // enable for serial debugging of receiver inputs
+  debug(); // enable for serial debugging of receiver inputs
 }
