@@ -193,5 +193,5 @@ void loop() {
 
   }
   
-  debug(); // enable for serial debugging of receiver inputs
+//  debug(); // enable for serial debugging of receiver inputs
 }
